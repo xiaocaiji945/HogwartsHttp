@@ -16,4 +16,4 @@ def test_same():
     for i in range(0, n):
         for j in range(i + 1, n):
             if (arr[i] == arr[j]):
-                print(arr[i])
+                print(f'相同的数字：{arr[i]}')
