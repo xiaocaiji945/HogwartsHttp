@@ -1,4 +1,4 @@
-import test_requests1
+from class_preview import test_requests1
 
 
 class TestApiRequests:
