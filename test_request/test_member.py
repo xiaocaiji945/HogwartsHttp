@@ -10,7 +10,7 @@ class TestMenber:
 
     def get_token(self):
         corpid = "ww5b005eced8645715"
-        corpsecret = "UZu4N8ruskIwKmofJI0s9B5Gr_HQsUxrmQkWC7CpdAE"
+        corpsecret = "UZu4N8ruskIwKmofJI0s9P4AaLel6srpSNXSYJEHjGY"
         url = f"https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid={corpid}&corpsecret={corpsecret}"
         token = requests.get(url).json()["access_token"]
         return token
