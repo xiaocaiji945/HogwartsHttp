@@ -22,7 +22,8 @@ class AddressPage(BaseApi):
             "url": self._get_url("get"),
             "params": {"userid": self._userid}
         }
-        result = self.send_api(data)
+        result = self.send_cookie_api(data)
+        print(result)
         return result
 
     def add_member(self):

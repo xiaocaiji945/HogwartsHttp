@@ -7,7 +7,7 @@ from test_request.api_page.wework_utils import WeWorkUtils
 
 class TestAddressPage():
 
-    def setup(self):
+    def setup_class(self):
         self.address = AddressPage()
         # assert jsonpath(result.json(), "$.errmsg")[0] == 'deleted'
 
@@ -31,13 +31,13 @@ class TestAddressPage():
         assert member_message["errcode"] in [0, 60111]
         assert member_message["errmsg"] == "deleted"
 
-    def test_session(self):
-        s = requests.session()
-        _corpsecret = "UZu4N8ruskIwKmofJI0s9P4AaLel6srpSNXSYJEHjGY"
-        s.params = {"access_token": WeWorkUtils().get_token(_corpsecret)}
-        data = {
-            "method": "get",
-            "url": "https://qyapi.weixin.qq.com/cgi-bin/user/get",
-            "params": {"userid": "labixiaoxin"}
-        }
-        print(s.request(**data).json())
+    # def test_session(self):
+    #     s = requests.session()
+    #     _corpsecret = "UZu4N8ruskIwKmofJI0s9P4AaLel6srpSNXSYJEHjGY"
+    #     s.params = {"access_token": WeWorkUtils().get_token(_corpsecret)}
+    #     data = {
+    #         "method": "get",
+    #         "url": "https://qyapi.weixin.qq.com/cgi-bin/user/get",
+    #         "params": {"userid": "labixiaoxin"}
+    #     }
+    #     print(s.request(**data).json())
